@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import fetchUser from './Components/fetch/fetchUser';
+import SearchInput from './Components/SearchInput';
+import UserInfo  from './Components/UserInfo';
 
-class App extends Component {
+export default class App extends Component {
+  state = {
+    userInfo: {
+      name : '',
+      url : ''
+    }
+  }
+
+  onSubmit = async(userName) => {
+    await fetchUser(userName)
+      .then(res => {
+        this.setState({userInfo: res});
+      })
+      .catch(reject => {
+        this.setState({userInfo : {name:'User Not Found', url:'#'}});
+      });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <SearchInput onSubmit={this.onSubmit}/>
+        <UserInfo userName={this.state.userInfo.name} userUrl={this.state.userInfo.url}/>
+      </React.Fragment>
     );
   }
 }
-
-export default App;
