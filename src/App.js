@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
-import FetchUser from './Components/fetch/FetchUser';
-import SearchInput from './Components/SearchInput';
-import UserInfo  from './Components/UserInfo';
+import { fetchUsers } from './utils/fetch';
+import SearchInput from './components/SearchInput';
+import UsersTable from './components/UsersTable';
 
 export default class App extends Component {
   state = {
-    userInfo: {
-      name : '',
-      url : ''
-    },
-    hasError: false
+    users: [],
+    isLoading: false
   }
 
   onSubmit = async(userName) => {
     try {
-      const result = await FetchUser(userName);
-      this.setState({userInfo: result, hasError: false});
+      this.setState({ isLoading: true});
+      const result = await fetchUsers(userName);
+      this.setState({users: result});
     } catch(e){
-      this.setState({userInfo : {name:'User Not Found', url:'#'}, hasError: true});
+      this.setState({users : []});
     }
   }
 
   render() {
+    const { users } = this.state;
     return (
-      <div style={{'margin-top':50}}>
+      <div>
         <SearchInput onSubmit={this.onSubmit}/>
-        <UserInfo userName={this.state.userInfo.name} userUrl={this.state.userInfo.url} hasError={this.state.hasError}>
-          <span>Not found!</span>
-        </UserInfo>
+        <UsersTable  dataSource={users}/>
       </div>
     );
   }

@@ -1,39 +1,30 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import {
-  Form, Icon, Input, Button, Row, Col
+  Form, Icon, Input, Row, Col
 } from 'antd';
 import PropTypes from 'prop-types';
 
 export default class SearchInput extends Component {
 
-  state = {
-    value :''
-  }
-
-  onChange = (e) => {
-    this.setState({value: e.target.value});
-  }
-
-  onSubmit = (e) => {
-    e.preventDefault();
-    this.props.onSubmit(this.state.value);
+  onSubmit = (value, event) => {
+    event.preventDefault();
+    this.props.onSubmit(value);
   }
 
   render() {
     return (
-      <Row justify='center' align='middle' style={{'margin-top': 5}}>
-        <Col offset={10} span={5}>
+      <Row justify='center' align='middle'>
+        <Col offset={10} >
           <Form layout="inline" onSubmit={this.onSubmit}>
             <Form.Item>
-              <Input
+              <Input.Search
                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                type="text" name="userName" placeholder={this.props.placeholder}
-                value={this.state.value} onChange={this.onChange}
+                size="large"
+                enterButton
+                placeholder={this.props.placeholder}
+                onSearch={this.onSubmit}
               />
-            </Form.Item>
-            <Form.Item>
-              <Button type="primary" shape="circle" icon="search" htmlType="submit" onClick={this.onSubmit} value="Search"/>
             </Form.Item>
           </Form>
         </Col>
