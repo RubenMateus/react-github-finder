@@ -1,5 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { I18n } from 'react-polyglot';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const locale = window.locale || 'en';
+
+ReactDOM.render(
+  <I18n locale={locale}>
+    <App />
+  </I18n>,
+  document.getElementById('root'));

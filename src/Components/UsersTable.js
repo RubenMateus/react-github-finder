@@ -47,7 +47,7 @@ export default class UsersTable extends React.Component {
     });
   }
 
-  static getDerivedStateFromProps = ({dataSource}) => {
+  static getDerivedStateFromProps = ({ dataSource }) => {
     const data = dataSource.map(user => {
       return {
         key: user.id,

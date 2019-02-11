@@ -5,13 +5,11 @@ import UsersTable from './components/UsersTable';
 
 export default class App extends Component {
   state = {
-    users: [],
-    isLoading: false
+    users: []
   }
 
   onSubmit = async(userName) => {
     try {
-      this.setState({ isLoading: true});
       const result = await fetchUsers(userName);
       this.setState({users: result});
     } catch(e){
