@@ -1,6 +1,6 @@
 import { Table, Tag, Avatar, Modal, Divider, Badge } from 'antd';
 import React from 'react';
-import { fetchUser } from './../utils/fetch';
+import * as api from '../../utils/api-service';
 
 export default class UsersTable extends React.Component {
   state = {
@@ -14,7 +14,7 @@ export default class UsersTable extends React.Component {
       onClick: async() => {
         const userName= record.info.name;
         try {
-          const result = await fetchUser(userName);
+          const result = await api.users.fetchByName(userName);
           console.log(result);
           const {
             bio,
