@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
-import * as api from './utils/api-service';
-import SearchInput from './shared/components/SearchInput';
-import UsersTable from './shared/components/UsersTable';
+import { Provider } from 'react-redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import usersReducer from './shared/state/users';
+import Search from './pages/Search';
+import 'antd/dist/antd.css';
+
+const store = createStore(combineReducers({
+  users: usersReducer
+}), applyMiddleware(thunk));
 
 export default class App extends Component {
-  state = {
-    users: []
-  };
-
-  onSubmit = async(userName) => {
-    try {
-      const result = await api.users.fetch(userName);
-      this.setState({users: result});
-    } catch(e){
-      this.setState({users : []});
-    }
-  }
-
   render() {
-    const { users } = this.state;
     return (
-      <>
-        <SearchInput onSubmit={this.onSubmit}/>
-        <UsersTable  dataSource={users}/>
-      </>
+      <Provider store={store}>
+        <Search />
+      </Provider>
     );
   }
 }

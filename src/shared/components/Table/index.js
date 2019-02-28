@@ -1,0 +1,21 @@
+
+import { connect } from 'react-redux';
+import Table from './Table';
+
+const mapStateToProps = (state) => {
+  return {
+    data: state.users.list.map(user => {
+      return {
+        key: user.id,
+        image_url : user.avatar_url,
+        info: {
+          name: user.login,
+          link: user.html_url
+        },
+        score: user.score,
+      };
+    })
+  };
+};
+
+export default connect(mapStateToProps)(Table);

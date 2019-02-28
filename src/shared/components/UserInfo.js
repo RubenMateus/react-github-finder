@@ -1,6 +1,6 @@
 import React from 'react';
-import 'antd/dist/antd.css';
 import { Row, Col } from 'antd';
+import 'antd/dist/antd.css';
 
 const UserInfo = ({ userUrl, userName, hasError, children }) =>
   (<Row style={{'marginTop': 5}}>
