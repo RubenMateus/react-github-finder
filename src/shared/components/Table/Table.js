@@ -1,4 +1,5 @@
-import { Table as AntTable, Tag, Avatar, Row, Col } from 'antd';
+import { Table as AntTable, Tag, Avatar, Row, Col, Button, Icon } from 'antd';
+import { Link } from "react-router-dom";
 import React from 'react';
 
 export default class Table extends React.Component {
@@ -34,4 +35,12 @@ const columns = [{
     <span>
       <Tag color={score >= 75 ? 'green' : score >= 50 ? 'geekblue' : 'volcano'} key={score}>{score}</Tag>
     </span>
+},{
+  title: '',
+  dataIndex: 'moreInfo',
+  key: 'moreInfo',
+  render: moreInfo =>
+  <Button type="primary">
+    <Link to={`users/${moreInfo}`}>More Info <Icon type="right"/></Link>
+  </Button>
 }];

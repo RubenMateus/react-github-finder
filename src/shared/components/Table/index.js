@@ -5,6 +5,7 @@ import Table from './Table';
 const mapStateToProps = (state) => {
   return {
     data: state.users.list.map(user => {
+      console.log(user);
       return {
         key: user.id,
         image_url : user.avatar_url,
@@ -13,6 +14,7 @@ const mapStateToProps = (state) => {
           link: user.html_url
         },
         score: user.score,
+        moreInfo: user.login
       };
     })
   };

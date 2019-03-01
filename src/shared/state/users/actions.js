@@ -15,4 +15,3 @@ export const submitSearch = (searchInput) => {
     return dispatch(updateUserList(response));
   }
 }
-
