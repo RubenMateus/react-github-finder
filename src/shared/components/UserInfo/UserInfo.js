@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Skeleton, Tag, Card, Button, Icon, Avatar, Row, Col } from 'antd';
+import { Skeleton, Tag, Card, Button, Row, Col } from 'antd';
 import './UserInfo.css';
 
 export default class UserInfo extends Component {
