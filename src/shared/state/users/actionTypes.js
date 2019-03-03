@@ -1,1 +1,2 @@
 export const USER_SEARCH_FETCHED = 'USER_SEARCH_FETCHED';
+export const USER_FETCHED = 'USER_FETCHED';

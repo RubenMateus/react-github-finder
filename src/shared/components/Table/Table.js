@@ -40,7 +40,7 @@ const columns = [{
   dataIndex: 'moreInfo',
   key: 'moreInfo',
   render: moreInfo =>
-  <Button type="primary">
-    <Link to={`users/${moreInfo}`}>More Info <Icon type="right"/></Link>
-  </Button>
+    <Button type="primary">
+      <Link to={`users/${moreInfo}`}>More Info <Icon type="right"/></Link>
+    </Button>
 }];
