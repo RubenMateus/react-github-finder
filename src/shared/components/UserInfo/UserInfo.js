@@ -35,16 +35,16 @@ export default class UserInfo extends Component {
                     <Tag color="cyan">Followers: {user.followers}</Tag>
                     <Tag color="geekblue">Following: {user.following}</Tag>
                   </div>
-                  {user.bio ? <p><b>Bio:</b> {user.bio}</p> : null}
-                  {user.email ? <p><b>Email:</b> {user.email}</p> : null}
-                  {user.company ? <p><b>Company:</b> {user.company}</p> : null}
-                  {user.blog ? <p><b>Website/blog:</b>
+                  {user.bio && <p><b>Bio:</b> {user.bio}</p>}
+                  {user.email && <p><b>Email:</b> {user.email}</p>}
+                  {user.company && <p><b>Company:</b> {user.company}</p>}
+                  {user.blog && <p><b>Website/blog:</b>
                     <a href={user.blog} target="_blank" rel="noopener noreferrer"> {user.blog}</a>
-                  </p> : null}
-                  {user.location ? <p><b>Location</b> {user.location}</p> : null}
-                  {user.created_at ? <p><b>Member Since:</b> {new Date(user.created_at).toGMTString()}</p> : null}
+                  </p>}
+                  {user.location && <p><b>Location</b> {user.location}</p>}
+                  {user.created_at && <p><b>Member Since:</b> {new Date(user.created_at).toGMTString()}</p>}
                   <div className="mb-10">
-                    {user.hireable ? <Tag color="purple">Hireable</Tag> : null}
+                    {user.hireable && <Tag color="purple">Hireable</Tag>}
                   </div>
                 </Col>
               </Row>
