@@ -1,11 +1,20 @@
 {
-  "name": "github-finder",
-  "version": "0.1.0",
+  "name": "react-github-finder",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.13.0",
+    "axios": "^0.18.0",
+    "node-polyglot": "^2.3.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3"
+    "react-polyglot": "^0.2.6",
+    "react-redux": "^6.0.1",
+    "react-router-config": "^4.4.0-beta.6",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.3",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
