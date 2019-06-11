@@ -6,7 +6,7 @@
     "antd": "^3.19.3",
     "axios": "^0.19.0",
     "node-polyglot": "^2.3.0",
-    "react": "^16.7.0",
+    "react": "^16.8.6",
     "react-dom": "^16.7.0",
     "react-polyglot": "^0.4.0",
     "react-redux": "^6.0.1",
