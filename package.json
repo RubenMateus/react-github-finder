@@ -10,7 +10,7 @@
     "react-dom": "^16.8.6",
     "react-polyglot": "^0.4.0",
     "react-redux": "^6.0.1",
-    "react-router-config": "^4.4.0-beta.6",
+    "react-router-config": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.3",
     "redux": "^4.0.1",
