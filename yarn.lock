@@ -8997,10 +8997,10 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-polyglot@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/react-polyglot/-/react-polyglot-0.4.1.tgz#3a84acfcee8671820435d267c8de9b721fe43c28"
-  integrity sha512-PubKTJg5XPd9Tf5vhiDCo6glSvK3tuyZ5LcKoWcJ9AetO1TsHwgnKzU9it0n8Gxl+05XLeP30OR8CIpgJ0L9gg==
+react-polyglot@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/react-polyglot/-/react-polyglot-0.5.0.tgz#f624c188b13ba6c5e783b3b13214db24023f6e9c"
+  integrity sha512-ri6SN4D7kUKs3JSEuD6Uwcao+EF9LKfv1zdVDhc4Txb0gowwwxXAQiippKXUUTcYu3Bgxz9n3rwJGXczpgqJww==
   dependencies:
     hoist-non-react-statics "^2.5.0"
     prop-types "^15.5.8"
