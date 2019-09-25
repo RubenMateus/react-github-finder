@@ -9017,10 +9017,10 @@ react-redux@^7.1.1:
     prop-types "^15.7.2"
     react-is "^16.9.0"
 
-react-router-config@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/react-router-config/-/react-router-config-5.0.1.tgz#e6663010f42aa5e39c2f21412d8f958f6866e48a"
-  integrity sha512-dgM4+aW08eMWJYnmYWRvaArOrvwdl440W2m3y6IcGUSizXD5BTg/OcJ//z8kTiHnLG+uOwXRiCnKjWQ7IkvNnA==
+react-router-config@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-router-config/-/react-router-config-5.1.0.tgz#8eb1c41ccda5017f69940e30c9bae98f39ba1ee6"
+  integrity sha512-nEQSwKsvyrDMlxrULjjMJz9TxUuZNuJmzZbaUr65i8HM9wqdJOwksLwrWGds7ZdVBOtXWXFNx+CHMVutBzgGeA==
   dependencies:
     "@babel/runtime" "^7.1.2"
 
