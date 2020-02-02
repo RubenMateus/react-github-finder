@@ -10,8 +10,8 @@ export default class UserInfo extends Component {
   }
 
   render() {
-    const { user, loading = false} = this.props;
-    console.log(user);
+    const { user, loading = false } = this.props;
+
     return (
       <Row>
         <Col offset={6} span={12}>
