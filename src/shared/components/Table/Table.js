@@ -1,4 +1,5 @@
-import { Table as AntTable, Tag, Avatar, Row, Col, Button, Icon } from 'antd';
+import { RightOutlined } from '@ant-design/icons';
+import { Table as AntTable, Tag, Avatar, Row, Col, Button } from 'antd';
 import { Link } from "react-router-dom";
 import React from 'react';
 
@@ -41,6 +42,6 @@ const columns = [{
   key: 'moreInfo',
   render: moreInfo =>
     <Button type="primary">
-      <Link to={`users/${moreInfo}`}>More Info <Icon type="right"/></Link>
+      <Link to={`users/${moreInfo}`}>More Info <RightOutlined /></Link>
     </Button>
 }];

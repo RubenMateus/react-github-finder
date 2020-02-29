@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Icon, Input, Row, Col } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
+import { Input, Row, Col } from 'antd';
 import PropTypes from 'prop-types';
 import 'antd/dist/antd.css';
 
@@ -21,10 +22,10 @@ export default class SearchInput extends Component {
 
   render() {
     return (
-      <Row justify='center' align='middle' style={{marginTop:15}}>
+      <Row style={{marginTop:15}}>
         <Col offset={8} span={8}>
           <Input.Search
-            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+            prefix={<UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
             size="large"
             enterButton
             allowClear
@@ -33,6 +34,6 @@ export default class SearchInput extends Component {
           />
         </Col>
       </Row>
-    )
+    );
   }
-};
+}
