@@ -22,7 +22,7 @@ export default class SearchInput extends Component {
 
   render() {
     return (
-      <Row justify='center' align='middle' style={{marginTop:15}}>
+      <Row style={{marginTop:15}}>
         <Col offset={8} span={8}>
           <Input.Search
             prefix={<UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
