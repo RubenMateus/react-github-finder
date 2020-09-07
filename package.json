@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "antd": "^4.6.2",
+    "antd": "^4.6.3",
     "axios": "^0.20.0",
     "node-polyglot": "^2.4.0",
     "react": "^16.13.1",
