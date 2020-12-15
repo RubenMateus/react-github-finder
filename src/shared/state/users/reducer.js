@@ -5,7 +5,7 @@ const initialState = {
   user: {}
 };
 
-export default (state = initialState, action = {}) => {
+const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case actionTypes.USER_SEARCH_FETCHED:
       return {
@@ -21,3 +21,5 @@ export default (state = initialState, action = {}) => {
       return state;
   }
 };
+
+export default reducer;
