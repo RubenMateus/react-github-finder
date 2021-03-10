@@ -3,7 +3,7 @@ import SearchInput from '../shared/components/Search';
 import UsersTable from '../shared/components/Table';
 import Header from '../shared/components/Header/Header';
 
-export default function Search() {
+const Search = () => {
   return (
     <>
       <Header/>
@@ -12,3 +12,5 @@ export default function Search() {
     </>
   );
 };
+
+export default Search;
