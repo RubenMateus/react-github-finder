@@ -1,5 +1,5 @@
 import { RightOutlined } from '@ant-design/icons';
-import { Table as AntTable, Tag, Avatar, Row, Col, Button } from 'antd';
+import { Table as AntTable, Avatar, Row, Col, Button } from 'antd';
 import { Link } from "react-router-dom";
 import React from 'react';
 
@@ -28,20 +28,12 @@ const columns = [{
   dataIndex: 'info',
   key: 'info',
   render: info => <a target="_blank" rel="noopener noreferrer" href={info.link}>{info.name}</a>,
-}, {
-  title: 'Score',
-  dataIndex: 'score',
-  key: 'score',
-  render: score =>
-    <span>
-      <Tag color={score >= 75 ? 'green' : score >= 50 ? 'geekblue' : 'volcano'} key={score}>{score}</Tag>
-    </span>
 },{
   title: '',
   dataIndex: 'moreInfo',
   key: 'moreInfo',
   render: moreInfo =>
     <Button type="primary">
-      <Link to={`users/${moreInfo}`}>More Info <RightOutlined /></Link>
+      <Link to={moreInfo}>More Info <RightOutlined /></Link>
     </Button>
 }];

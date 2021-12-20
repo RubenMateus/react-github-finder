@@ -1,12 +1,13 @@
-import React, { Component, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { BrowserRouter } from "react-router-dom";
-import { renderRoutes } from 'react-router-config';
-import routes from './routes/routes';
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import thunk from 'redux-thunk';
 import usersReducer from './shared/state/users';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
+
+import UserDetails from "./pages/UserDetails";
+import Search from "./pages/Search";
 
 const store = createStore(combineReducers({
   users: usersReducer
@@ -18,16 +19,18 @@ const Loader = () => (
   </div>
 );
 
-export default class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Suspense fallback={<Loader />}>
-            {renderRoutes(routes)}
-          </Suspense>
-        </BrowserRouter>
-      </Provider>
-    );
-  }
+export default function App() {
+  return (
+    <Provider store={store}>
+      <Router>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" exact element={<Navigate to="/users" />} />
+            <Route path="users" element={<Search />} />
+            <Route path="users/:username" element={<UserDetails />} />
+          </Routes>
+        </Suspense>
+      </Router>
+    </Provider>
+  );
 }
