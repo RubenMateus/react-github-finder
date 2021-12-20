@@ -13,22 +13,23 @@ export default function Header() {
 
   const menuItemStyle = { minWidth: '160px' };
 
+  const languages = [
+    { key: 'en', text: 'English', ariaLabel : 'en-US', mem: "🇺🇸" },
+    { key: 'pt', text: 'Português', ariaLabel : 'en-US', mem: "🇵🇹" },
+  ];
+
   const menu = (
     <Menu
       selectedKeys={[i18n.language]} onClick={changeLanguage}
     >
-      <Menu.Item key={'en'} style={menuItemStyle}>
-        <span role='img' aria-label={'en-US'}>
-          {"🇺🇸"}
-        </span>{' '}
-        {'English'}
-      </Menu.Item>
-      <Menu.Item key={'pt'} style={menuItemStyle}>
-        <span role='img' aria-label={'pt-PT'}>
-          {"🇵🇹"}
-        </span>{' '}
-        {'Português'}
-      </Menu.Item>
+      {languages.map(({ key, text, ariaLabel, mem }) => (
+        <Menu.Item key={key} style={menuItemStyle}>
+          <span role='img' aria-label={ariaLabel}>
+            {mem}
+          </span>{' '}
+          {text}
+        </Menu.Item>
+      ))}
     </Menu>
   );
 
