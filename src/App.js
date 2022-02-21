@@ -3,7 +3,9 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import thunk from 'redux-thunk';
+
 import usersReducer from './shared/state/users';
+
 import 'antd/dist/antd.min.css';
 
 import UserDetails from "./pages/UserDetails";
