@@ -10,7 +10,7 @@
     "i18next-http-backend": "^1.4.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-i18next": "^11.16.9",
+    "react-i18next": "^11.17.1",
     "react-redux": "^8.0.2",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^6.3.0",
